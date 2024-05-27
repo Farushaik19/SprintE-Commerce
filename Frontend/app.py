@@ -11,11 +11,13 @@ def home():
       products = {'products':[]}  # Handle the case where the request fails
    print("products are ",products)
    return render_template('homepage.html', products=products['products'])
+@app.route('/login')
+def login():
+   return render_template('login.html')
 
 @app.route('/cart')
 def cart():
    return render_template('cartpage.html')
 
-   return render_template('homepage.html', products=products['products'])
 if __name__ == '__main__':
    app.run(port=8000)

@@ -1192,3 +1192,46 @@ form.example::after {
     clear: both;
     display: table;
 }
+
+
+#loginForm {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+#loginForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#loginForm button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #5C6BC0;
+}
+
+.Forgot-Password {
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color: #5C6BC0;
+}
+
+.create-account-button {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #5C6BC0;
+    border-radius: 5px;
+}
