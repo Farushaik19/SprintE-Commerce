@@ -5,9 +5,9 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<form id="loginForm">
-    <input type="text" id="username" placeholder="Username">
-    <input type="password" id="password" placeholder="Password">
+<form id="loginForm" action="/login" method="POST">
+    <input type="text" name="email" id="username" placeholder="Username">
+    <input type="password" name="password" id="password" placeholder="Password">
     <button type="submit">Login</button>
     <a href="forgot-password.html" class="Forgot-Password">Forgot Password</a>
 </form>
