@@ -13,7 +13,7 @@ def home():
    return render_template('homepage.html', products=products['products'])
 
 @app.route('/cart')
-def home():
+def cart():
    return render_template('cartpage.html')
 
    return render_template('homepage.html', products=products['products'])
