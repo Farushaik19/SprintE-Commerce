@@ -11,9 +11,9 @@
 
 
 
-<form id="registrationForm">
-    <input type="text" id="username" placeholder="Username">
-    <input type="password" id="password" placeholder="Password">
+<form id="registrationForm" action="/signup" method="POST">
+    <input type="text" name="email" id="username" placeholder="Username">
+    <input type="password" name="password" id="password" placeholder="Password">
     <button type="submit">Register</button>
 </form>
 <script src="script.js"></script>
@@ -21,4 +21,3 @@
 
 
 </html>
-
