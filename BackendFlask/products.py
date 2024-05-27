@@ -26,7 +26,6 @@ class Product:
         ))
         self.product_id = cursor.lastrowid
         db.commit()
-        db.close()
 
     @classmethod
     def getAllProducts(cls):
