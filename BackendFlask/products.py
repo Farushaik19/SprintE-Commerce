@@ -9,6 +9,7 @@ class Product:
         self.created_at = created_at or datetime.utcnow()
         self.updated_at = updated_at or datetime.utcnow()
 
+
     def insertProduct(self):
         cursor = db.cursor()
         sql = """
@@ -26,3 +27,15 @@ class Product:
         self.product_id = cursor.lastrowid
         db.commit()
         db.close()
+
+    @classmethod
+    def getAllProducts(cls):
+        cursor = db.cursor()
+        sql = """
+            SELECT * FROM products
+        """
+        cursor.execute(sql)
+        products = cursor.fetchall()
+        cursor.close()
+        return products
+

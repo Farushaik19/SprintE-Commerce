@@ -22,6 +22,14 @@ def add_product():
     except Exception as e:
         return jsonify({'message': f'Failed to add product: {str(e)}'}), 500
 
+@app.route('/getAllProducts', methods=['GET'])
+def getProducts():
+    try:
+        products = Product.getAllProducts()
+        return jsonify({"message":"Success","products":products}),200
+    except Exception as e:
+        return jsonify({"message": "Error occurred", "error": str(e)}), 500
+
 
 if __name__ == '__main__':
     app.run()
