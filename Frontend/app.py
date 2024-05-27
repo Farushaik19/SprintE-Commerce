@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect
 import requests
 app = Flask(__name__)
 
@@ -16,6 +16,19 @@ def home():
 def cart():
    return render_template('cartpage.html')
 
-   return render_template('homepage.html', products=products['products'])
+@app.route('/addCart',methods=['POST'])
+def addTocart():
+   print("data is ",request.form["product_id"])
+   res = requests.post("http://127.0.0.1:5000/addCart",
+                            json={"product_id": request.form["product_id"],
+                                  "user_id": request.form["user_id"]
+                                  },
+                            headers={"Content-Type": "application/json"},
+                            )
+   if res.status_code == 201:
+       return redirect("http://127.0.0.1:8000")
+   else:
+       return redirect("http://127.0.0.1:8000")
+
 if __name__ == '__main__':
    app.run(port=8000)

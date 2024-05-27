@@ -45,7 +45,15 @@
             <h5>{{ product[1] }}</h5>
             <h4>${{ product[2] }}</h4>
         </div>
-        <a href="#"><i class="far fa-shopping-cart cart"></i></a>
+        <form action="http://127.0.0.1:8000/addCart" method="POST" id="addToCartForm">
+            <input type="hidden" name="user_id" value="1">
+            <input type="hidden" name="product_id" value="{{ product[0] }}">
+
+            <button type="submit">
+                <i class="far fa-shopping-cart cart"></i>
+            </button>
+        </form>
+
     </div>
     {% endfor %}
 </div>
