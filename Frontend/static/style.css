@@ -19,8 +19,9 @@ h2 {
 }
 
 h4 {
-    font-size: 20px;
+    font-size: 30px;
     color: #222;
+    padding-bottom:15px;
 }
 
 h6 {
@@ -1192,3 +1193,41 @@ form.example::after {
     clear: both;
     display: table;
 }
+
+.styled-button{
+    background-color: #4CAF50;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.02s
+
+}
+
+.styled-button:hover{
+    background-color: whitesmoke;
+    color: #4CAF50;
+    border-width:2px;
+    border-color:#4CAF50;
+}
+
+
+.form-popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 570px;
+            height: 430px;
+            border: 3px solid #f1f1f1;
+            z-index: 9;
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            overflow: auto;
+        }
+
+
