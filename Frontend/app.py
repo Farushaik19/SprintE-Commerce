@@ -38,7 +38,7 @@ def addTocart():
    print("data is ",request.form["product_id"])
    res = requests.post("http://127.0.0.1:5000/addCart",
                             json={"product_id": request.form["product_id"],
-                                  "user_id": request.form["user_id"]
+                                     "user_id": request.form["user_id"]
                                   },
                             headers={"Content-Type": "application/json"},
                             )

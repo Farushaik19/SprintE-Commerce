@@ -5,11 +5,15 @@ import secrets
 from flask import Flask, jsonify, request, session, redirect, url_for, flash, render_template
 from flask_bcrypt import Bcrypt
 import re
+import requests
+import random
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, supports_credentials=True)
+
 frontEnd = "http://127.0.0.1:8000/"
+
+CORS(app, supports_credentials=True)
 
 secret_key = secrets.token_hex(16)
 app.secret_key = secret_key
@@ -106,9 +110,9 @@ def session_data():
         }), 200
     else:
         return jsonify({'message': 'No active session found.'}), 401
-
+@app.route('/addProduct', methods=['POST'])
 def add_product():
-    data = request.form
+    data = request.json
     name = data.get('name')
     description = data.get('description')
     price = data.get('price')
@@ -147,10 +151,10 @@ def getProducts():
         
 @app.route('/addCart', methods=['POST'])
 def add_to_cart():
-    data = request.form
+    data = request.json
     prod_id = data.get('product_id')
     user_id = data.get('user_id')
-
+    print("data is ",prod_id,user_id)
     if not (prod_id and user_id):
         return jsonify({'message': 'Missing required fields'}), 400
 
