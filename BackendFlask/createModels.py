@@ -12,6 +12,17 @@ CREATE TABLE IF NOT EXISTS products (
 cursor=db.cursor()
 cursor.execute(sql)
 
+# SQL statement to create the users table
+sql = """
+    CREATE TABLE IF NOT EXISTS users (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        email VARCHAR(255) UNIQUE NOT NULL,
+        password_hash VARCHAR(255) NOT NULL,
+        is_admin TINYINT DEFAULT 0
+    )
+    """
+cursor.execute(sql)
+
 sql = """
 CREATE TABLE IF NOT EXISTS carts (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -38,16 +49,6 @@ CREATE TABLE IF NOT EXISTS orders (
 """
 cursor.execute(sql)
 
- # SQL statement to create the users table
-sql = """
-    CREATE TABLE IF NOT EXISTS users (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        email VARCHAR(255) UNIQUE NOT NULL,
-        password_hash VARCHAR(255) NOT NULL,
-        is_admin TINYINT DEFAULT 0
-    )
-    """
-cursor.execute(sql)
 
 cursor.close()
 db.close()
