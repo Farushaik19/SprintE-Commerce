@@ -718,25 +718,6 @@ button.white {
     width: 40%;
 }
 
-.fasio {
-    width: 100px;
-    height: 80px;
-}
-
-.app-store {
-    width: 150px;
-    height: 80px;
-}
-
-.google-play {
-    width: 150px;
-    height: 80px;
-}
-
-.gate {
-    width: 200px;
-    height: 80px;
-}
 
 footer {
     display: flex;
@@ -748,11 +729,13 @@ footer .col {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 20pxs;
+    margin-bottom: 20px;
 }
 
-footer .logo {
+footer .fasio {
     margin-bottom: 30px;
+    width: 100px;
+    height: 90px;
 }
 
 footer h4 {
@@ -772,9 +755,22 @@ footer a {
     margin-bottom: 10px;
 }
 
+footer .follow i{
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer; 
+}
+footer .install .row img{
+    border: 1px solid #088178;
+    border-radius: 6px;
+}
+footer .install img{
+    margin: 10px 0 15px 0;
+
+}
 footer .follow i:hover,
-footer a:hover {
-    color: green;
+footer a:hover{
+    color: #088178;
 }
 
 footer .copyright {
