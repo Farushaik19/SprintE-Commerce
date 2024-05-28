@@ -12,6 +12,7 @@ def home():
    print("products are ",products)
    return render_template('homepage.html', products=products['products'])
 
+
 @app.route('/cart')
 def cart():
     response = requests.get('http://127.0.0.1:5000/getUserCartProducts/1')
@@ -19,7 +20,8 @@ def cart():
         cartProducts = response.json()  # Convert the response to JSON
     else:
         cartProducts = {'products': []}
-    return render_template('cartpage.html',products=cartProducts["cart"])
+
+    return render_template('cartpage.html',products=cartProducts["cart"],uid=cartProducts["userId"])
 
 @app.route('/login')
 def login():
