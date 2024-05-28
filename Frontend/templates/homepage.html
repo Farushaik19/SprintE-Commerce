@@ -37,6 +37,32 @@
     <section id="product1" class="section-p1">
         <h1>Featured Products</h1>
         <p>Summer collection new modern design</p>
+
+<!-- --------------------------------------------------Admin CRUD -------------------------------- -->
+
+        <button class="styled-button" onclick="openForm()" >Add New Product</button>
+        <div class="form-popup" id="myForm">
+            <form action="/" method="get">
+                <h4>Adding a Product</h4>
+                <label for="name">Product Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="desc">Product Description:</label><br>
+                <textarea type="text" id="desc" name="desc"></textarea><br><br>
+
+                <label for="img">Image link:</label><br>
+                <input type="text" id="img" name="img"><br><br>           <!-- can change type to url if needed -->
+
+                <label for="price">Price:</label><br>
+                <input type="number" id="price" name="price" required><br><br>
+
+                <button type="submit" class="styled-button">Submit</button>
+                <button type="button" class="styled-button" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+
+<!-- ------------------------------------------------------------------------------------- -->
+
        <div class="pro-container">
     {% for product in products %}
     <div class="pro">
@@ -46,7 +72,15 @@
             <h5>{{ product[1] }}</h5>
             <h4>${{ product[2] }}</h4>
         </div>
-        <a href="#"><i class="far fa-shopping-cart cart"></i></a>
+        <form action="http://127.0.0.1:8000/addCart" method="POST" id="addToCartForm">
+            <input type="hidden" name="user_id" value="1">
+            <input type="hidden" name="product_id" value="{{ product[0] }}">
+
+            <button type="submit">
+                <i class="far fa-shopping-cart cart"></i>
+            </button>
+        </form>
+
     </div>
     {% endfor %}
 </div>
@@ -204,8 +238,16 @@
             <p>o 2022,Tech2 etc - HTML CSS E-COMMERCE TEMPLATE</p>
         </div>
     </footer>
-    <script></script>
 
+    <script>
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+    }
+    </script>
 </body>
 
 </html>
