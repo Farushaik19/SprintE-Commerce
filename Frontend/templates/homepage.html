@@ -42,17 +42,19 @@
 
         <button class="styled-button" onclick="openForm()" >Add New Product</button>
         <div class="form-popup" id="myForm">
-            <form action="/addProduct" method="post">
+            <form action="/addProduct" method="post" onsubmit="showAlert()">
                 <h4>Adding a Product</h4>
                 <label for="name">Product Name:</label><br>
                 <input type="text" id="name" name="name" required><br><br>
 
                 <label for="desc">Product Description:</label><br>
-                <textarea type="text" id="desc" name="desc"></textarea><br><br>
+                <textarea type="text" id="desc" name="desc" required></textarea><br><br>
+
+
                 <label for="price">Price:</label><br>
                 <input type="number" id="price" name="price" required><br><br>
 
-                <button type="submit" class="styled-button">Add Product</button>
+                <button type="submit" class="styled-button" onclick="validateForm()" >Add Product</button>
                 <button type="button" class="styled-button" onclick="closeForm()">Close</button>
             </form>
         </div>
@@ -70,9 +72,12 @@
         </div>
 
         <div class = "button-position">
+
             <form action="http://127.0.0.1:5000/deleteProduct/{{product[0]}}" method="POST" id="deleteProduct">
                 <button id="remove-button">Remove</button>
             </form>
+
+
         </div>
 
         <form action="http://127.0.0.1:8000/addCart" method="POST" id="addToCartForm">
@@ -106,7 +111,6 @@
             <button class="normal">Sign Up</button>
         </div>
 
-        </div>
     </section>
 
     <footer class="section-p1">
@@ -170,10 +174,26 @@
     function closeForm() {
         document.getElementById("myForm").style.display = "none";
     }
+
     function showMessage() {
-            var message = document.getElementById("message");
-            message.style.display = "block";
-        }
+        var message = document.getElementById("message");
+        message.style.display = "block";
+    }
+
+    function validateForm() {
+    var name = document.getElementById("name").value;
+    var desc = document.getElementById("desc").value;
+    var price = document.getElementById("price").value;
+
+    if (name && desc && price) {
+      closeForm();
+    } else {
+      alert("Please fill in all required fields.");
+    }
+  }
+    function showAlert() {
+    alert("Product added successfully!");
+  }
     </script>
 </body>
 
