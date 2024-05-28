@@ -1,7 +1,7 @@
 import pymysql
 hostname = 'localhost'
 user = 'root'
-password = 'Saibaba@123'
+password = 'root'
 database = 'Ecom'
 
 db = pymysql.connections.Connection(
