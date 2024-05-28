@@ -67,6 +67,29 @@ def login():
     else:
         return jsonify({'message': 'Login unsuccessful. Please check email and password.'}), 401
 
+#USER FORGOT PASSWORD
+@app.route('/forgot_password', methods=['POST'])
+def forgot_password():
+    email = request.json.get('email')
+    new_password = request.json.get('new_password')
+
+    if not is_valid_email(email):
+        return jsonify({'message': 'Invalid email format. Please enter a valid email address.'}), 400
+
+
+    cur = db.cursor()
+    cur.execute("SELECT * FROM users WHERE email = %s", (email,))
+    user = cur.fetchone()
+
+    if user:
+        password_hash = bcrypt.generate_password_hash(new_password).decode('utf-8')
+        cur.execute("UPDATE users SET password_hash = %s WHERE email = %s", (password_hash, email))
+        db.commit()
+        cur.close()
+        return jsonify({'message': 'Password updated successfully.'}), 200
+    else:
+        return jsonify({'message': 'Email not found. Please enter a valid email address.'}), 404
+
 @app.route('/logout', methods=['POST'])
 def logout():
     session.clear()
