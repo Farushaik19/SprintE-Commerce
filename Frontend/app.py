@@ -19,7 +19,8 @@ def cart():
         cartProducts = response.json()  # Convert the response to JSON
     else:
         cartProducts = {'products': []}
-    return render_template('cartpage.html',products=cartProducts["cart"])
+
+    return render_template('cartpage.html',products=cartProducts["cart"],uid=cartProducts["userId"])
 
 @app.route('/login')
 def login():
