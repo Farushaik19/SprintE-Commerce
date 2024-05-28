@@ -168,7 +168,7 @@ def getUserCart(user_id):
         return jsonify({"message":"Success","cart":cart}),200
     except Exception as e:
         return jsonify({"message": "Error occurred", "error": str(e)}), 500
-
+@app.route('/getUserCartProducts/<int:user_id>', methods=['GET'])
 def getUserCartProducts(user_id):
     try:
         userCart = Cart.getCart(user_id)
