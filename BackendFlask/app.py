@@ -180,6 +180,25 @@ def getUserCartProducts(user_id):
     except Exception as e:
         return jsonify({"message": "Error occurred", "error": str(e)}), 500
 
+# deletion of product from cart
+@app.route('/removeProduct/<int:prod_id>/<int:uid>', methods=['POST'])
+def removeProduct(prod_id,uid):
+    try:
+        Cart.removeProdUser(prod_id,uid)
+        return redirect(frontEnd+"cart")
+    except Exception as e:
+        print(str(e))
+        return jsonify({'error': 'something went wrong during deletion'})
+
+@app.route('/deleteProduct/<int:prod_id>', methods=['POST'])
+def deleteProduct(prod_id):
+    try:
+        Product.deleteProduct(prod_id)
+        return redirect(frontEnd)
+    except Exception as e:
+        print(str(e))
+        return jsonify({'error': 'something went wrong during deletion'})
+
 
 
 
