@@ -49,7 +49,7 @@ def signup():
         cur.execute("INSERT INTO users (email, password_hash, is_admin) VALUES (%s, %s, %s)", (email, password_hash, is_admin))
         db.commit()
         cur.close()
-        return redirect(url_for('home'))
+        return jsonify({'message': 'User created'}), 200
 
 @app.route('/login', methods=['POST'])
 def login():
@@ -63,12 +63,12 @@ def login():
     cur.execute("SELECT * FROM users WHERE email = %s", (email,))
     user = cur.fetchone()
     cur.close()
-
+    print(user);
     if user and bcrypt.check_password_hash(user[2], password):
         session['user_id'] = user[0]
         session['email'] = user[1]
-        session['is_admin'] = user[3]
-        return jsonify({'message': 'Login successful', 'user_id': user[0], 'email': user[1], 'is_admin': user[3]})
+        session['is_admin'] = user[4]
+        return jsonify({'message': 'Login successful', 'user_id': user[0], 'email': user[1], 'is_admin': user[4]})
     else:
         return jsonify({'message': 'Login unsuccessful. Please check email and password.'}), 401
 
