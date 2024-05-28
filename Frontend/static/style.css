@@ -1311,7 +1311,6 @@ form.example::after {
     border-radius: 4px;
     cursor: pointer;
     transition: 0.02s
-
 }
 
 .styled-button:hover{
@@ -1355,4 +1354,20 @@ form.example::after {
             border-radius: 5px;
         }
 
+adminOps
+#remove-button{
+    background-color: #4CAF50;
+    color: white;
+    font-size: 14px;
+    font-weight: 450;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.02s
+}
 
+.button-position {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
