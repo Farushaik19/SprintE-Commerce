@@ -29,10 +29,10 @@ class Cart:
     @classmethod
     def getCart(cls,user_id):
         cursor = db.cursor()
-        sql = f"""
-        SELECT * FROM carts WHERE user_id = {user_id}
+        sql = """
+            SELECT * FROM carts WHERE user_id = %s ORDER BY updated_at desc
         """
-        cursor.execute(sql)
+        cursor.execute(sql, (user_id,))
         cart = cursor.fetchall()
         cursor.close()
         return cart
