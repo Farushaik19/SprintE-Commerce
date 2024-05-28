@@ -37,3 +37,13 @@ class Cart:
         cursor.close()
         return cart
 
+    @classmethod
+    def removeProdUser(cls, pid, uid):
+        cursor = db.cursor()
+        sql = """
+            DELETE FROM carts WHERE user_id = %s AND product_id = %s;
+        """
+        cursor.execute(sql, (uid, pid))
+        db.commit()
+        cursor.close()
+
