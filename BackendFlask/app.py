@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 
 cursor = db.cursor()
-cursor.execute("CREATE DATABASE IF NOT EXISTS books_db")
+cursor.execute("CREATE DATABASE IF NOT EXISTS Ecom")
 cursor.execute("SHOW DATABASES")
 
 for databases in cursor:
