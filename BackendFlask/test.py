@@ -28,7 +28,6 @@ def home():
 def signup():
     email = request.json.get('email')
     password = request.json.get('password')
-    is_admin = 0
 
     if not is_valid_email(email):
         return jsonify({'message': 'Invalid email format. Please enter a valid email address.'}), 400
@@ -41,7 +40,7 @@ def signup():
         return jsonify({'message': 'Email already exists. Please choose a different email.'}), 400
     else:
         password_hash = bcrypt.generate_password_hash(password).decode('utf-8')
-        cur.execute("INSERT INTO users (email, password_hash, is_admin) VALUES (%s, %s, %s)", (email, password_hash, is_admin))
+        cur.execute("INSERT INTO users (email, password_hash) VALUES (%s, %s)", (email, password_hash))
         db.commit()
         cur.close()
         return redirect(url_for('home'))
@@ -62,8 +61,7 @@ def login():
     if user and bcrypt.check_password_hash(user[2], password):
         session['user_id'] = user[0]
         session['email'] = user[1]
-        session['is_admin'] = user[3]
-        return jsonify({'message': 'Login successful', 'user_id': user[0], 'email': user[1], 'is_admin': user[3]})
+        return jsonify({'message': 'Login successful', 'user_id': user[0], 'email': user[1]})
     else:
         return jsonify({'message': 'Login unsuccessful. Please check email and password.'}), 401
 
@@ -77,8 +75,7 @@ def session_data():
     if 'user_id' in session:
         return jsonify({
             'user_id': session['user_id'],
-            'email': session['email'],
-            'is_admin' : session['is_admin']
+            'email': session['email']
         }), 200
     else:
         return jsonify({'message': 'No active session found.'}), 401
@@ -131,19 +128,6 @@ def getUserCart(user_id):
         return jsonify({"message":"Success","cart":cart}),200
     except Exception as e:
         return jsonify({"message": "Error occurred", "error": str(e)}), 500
-@app.route('/getUserCartProducts/<int:user_id>', methods=['GET'])
-def getUserCartProducts(user_id):
-    try:
-        userCart = Cart.getCart(user_id)
-        cartProds = []
-        for cart in userCart:
-            cartProds.append(Product.getProductbyId(cart[2]))
-
-        return jsonify({"message":"Success","cart":cartProds}),200
-    except Exception as e:
-        return jsonify({"message": "Error occurred", "error": str(e)}), 500
-
-
 
 if __name__ == '__main__':
     app.run()

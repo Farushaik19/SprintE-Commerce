@@ -115,7 +115,7 @@ body {
 }
 
 #hero {
-    background: url('images/WhatsApp\ Image\ 2022-05-31\ at\ 2.24.37\ PM\ \(1\).jpeg');
+    background: url('images/WhatsApp\ Image\ 2022-05-31\ at\ 2.24.37\ PM\ \(1\).jpg');
     background-position: center;
     background-size: cover;
     height: 90vh;
@@ -454,143 +454,26 @@ button.white {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    background: url("images/party.jpg");
+    background: url("static/images/b14.png");
     background-repeat: no-repeat;
     background-position: 20% 30%;
+    background-color: #041e42;
 }
 
-#newsletter1 {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    background: url("images/shop.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 20% 30%;
-}
-
-#newsletter2 {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    background: url("images/blog.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 20% 30%;
-}
-
-#newsletter3 {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    background: url("images/about.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 20% 30%;
-}
-
-#newsletter4 {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    background-image: url("images/contact.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 20% 30%;
-}
 
 #newsletter h4 {
     font-size: 22px;
     font-weight: 700;
-    color: rgb(136, 145, 133);
-}
-
-#newsletter1 h4 {
-    font-size: 22px;
-    font-weight: 700;
-    color: rgb(136, 145, 133);
-}
-
-#newsletter2 h4 {
-    font-size: 22px;
-    font-weight: 700;
-    color: rgb(136, 145, 133);
-}
-
-#newsletter3 h4 {
-    font-size: 22px;
-    font-weight: 700;
-    color: rgb(136, 145, 133);
-}
-
-#newsletter4 h4 {
-    font-size: 22px;
-    font-weight: 700;
-    color: rgb(136, 145, 133);
+    color: #fff;
 }
 
 #newsletter p {
     font-size: 14px;
     font-weight: 600;
-    color: rgb(224, 26, 26);
+    color: #818ea0;
 }
-
-#newsletter1 p {
-    font-size: 14px;
-    font-weight: 600;
-    color: rgb(224, 26, 26);
-}
-
-#newsletter2 p {
-    font-size: 14px;
-    font-weight: 600;
-    color: rgb(224, 26, 26);
-}
-
-#newsletter3 p {
-    font-size: 14px;
-    font-weight: 600;
-    color: rgb(224, 26, 26);
-}
-
-#newsletter4 p {
-    font-size: 14px;
-    font-weight: 600;
-    color: rgb(224, 26, 26);
-}
-
 #newsletter p span {
-    font-size: 14px;
-    font-weight: 600;
-    color: #e0bc1a;
-}
-
-#newsletter1 p span {
-    font-size: 14px;
-    font-weight: 600;
-    color: #e0bc1a;
-}
-
-#newsletter2 p span {
-    font-size: 14px;
-    font-weight: 600;
-    color: #e0bc1a;
-}
-
-#newsletter3 p span {
-    font-size: 14px;
-    font-weight: 600;
-    color: #e0bc1a;
-}
-
-#newsletter4 p span {
-    font-size: 14px;
-    font-weight: 600;
-    color: #e0bc1a;
+    color: #ffbd27;
 }
 
 #newsletter input {
@@ -604,139 +487,19 @@ button.white {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
-
-#newsletter1 input {
-    height: 3.125rem;
-    padding: 0 1.25em;
-    font-size: 14px;
-    width: 100%;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    outline: none;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+#newsletter .form{
+    display: flex;
+    width: 40%;
 }
-
-#newsletter2 input {
-    height: 3.125rem;
-    padding: 0 1.25em;
-    font-size: 14px;
-    width: 100%;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    outline: none;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-#newsletter3 input {
-    height: 3.125rem;
-    padding: 0 1.25em;
-    font-size: 14px;
-    width: 100%;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    outline: none;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-#newsletter4 input {
-    height: 3.125rem;
-    padding: 0 1.25em;
-    font-size: 14px;
-    width: 100%;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    outline: none;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
 #newsletter button {
-    background-color: rgb(116, 187, 9);
+    background-color: #088178;
     color: white;
     white-space: nowrap;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
 
-#newsletter1 button {
-    background-color: rgb(116, 187, 9);
-    color: white;
-    white-space: nowrap;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
 
-#newsletter2 button {
-    background-color: rgb(116, 187, 9);
-    color: white;
-    white-space: nowrap;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-#newsletter3 button {
-    background-color: rgb(116, 187, 9);
-    color: white;
-    white-space: nowrap;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-#newsletter4 button {
-    background-color: rgb(116, 187, 9);
-    color: white;
-    white-space: nowrap;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-#newsletter .form {
-    display: flex;
-    width: 40%;
-}
-
-#newsletter1 .form {
-    display: flex;
-    width: 40%;
-}
-
-#newsletter2 .form {
-    display: flex;
-    width: 40%;
-}
-
-#newsletter3 .form {
-    display: flex;
-    width: 40%;
-}
-
-#newsletter4 .form {
-    display: flex;
-    width: 40%;
-}
-
-.fasio {
-    width: 100px;
-    height: 80px;
-}
-
-.app-store {
-    width: 150px;
-    height: 80px;
-}
-
-.google-play {
-    width: 150px;
-    height: 80px;
-}
-
-.gate {
-    width: 200px;
-    height: 80px;
-}
 
 footer {
     display: flex;
@@ -748,11 +511,13 @@ footer .col {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 20pxs;
+    margin-bottom: 20px;
 }
 
-footer .logo {
+footer .fasio {
     margin-bottom: 30px;
+    width: 100px;
+    height: 90px;
 }
 
 footer h4 {
@@ -772,9 +537,22 @@ footer a {
     margin-bottom: 10px;
 }
 
+footer .follow i{
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer; 
+}
+footer .install .row img{
+    border: 1px solid #088178;
+    border-radius: 6px;
+}
+footer .install img{
+    margin: 10px 0 15px 0;
+
+}
 footer .follow i:hover,
-footer a:hover {
-    color: green;
+footer a:hover{
+    color: #088178;
 }
 
 footer .copyright {
@@ -1236,7 +1014,7 @@ form.example::after {
     background-color: #5C6BC0;
     border-radius: 5px;
 }
-
+*/
 #registrationForm {
     background-color: white;
     padding: 20px;
@@ -1315,7 +1093,6 @@ form.example::after {
     border-radius: 4px;
     cursor: pointer;
     transition: 0.02s
-
 }
 
 .styled-button:hover{
@@ -1359,4 +1136,20 @@ form.example::after {
             border-radius: 5px;
         }
 
+adminOps
+#remove-button{
+    background-color: #4CAF50;
+    color: white;
+    font-size: 14px;
+    font-weight: 450;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.02s
+}
 
+.button-position {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}

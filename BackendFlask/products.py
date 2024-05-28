@@ -38,3 +38,14 @@ class Product:
         cursor.close()
         return products
 
+    @classmethod
+    def getProductbyId(cls,id):
+        cursor = db.cursor()
+        sql = f"""
+                SELECT * FROM products where product_id = {id}
+            """
+        cursor.execute(sql)
+        products = cursor.fetchall()
+        cursor.close()
+        return products[0]
+
