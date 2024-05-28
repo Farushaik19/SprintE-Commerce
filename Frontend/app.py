@@ -14,7 +14,12 @@ def home():
 
 @app.route('/cart')
 def cart():
-   return render_template('cartpage.html')
+    response = requests.get('http://127.0.0.1:5000/getUserCartProducts/1')
+    if response.status_code == 200:
+        cartProducts = response.json()  # Convert the response to JSON
+    else:
+        cartProducts = {'products': []}
+    return render_template('cartpage.html',products=cartProducts["cart"])
 
 @app.route('/login')
 def login():
@@ -39,6 +44,8 @@ def addTocart():
        return redirect("http://127.0.0.1:8000")
    else:
        return redirect("http://127.0.0.1:8000")
+
+
 
 # Add Product Post
 @app.route('/addProduct',methods=["POST"])

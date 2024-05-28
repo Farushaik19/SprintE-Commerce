@@ -68,6 +68,19 @@ def getUserCart(user_id):
         return jsonify({"message":"Success","cart":cart}),200
     except Exception as e:
         return jsonify({"message": "Error occurred", "error": str(e)}), 500
+@app.route('/getUserCartProducts/<int:user_id>', methods=['GET'])
+def getUserCartProducts(user_id):
+    try:
+        userCart = Cart.getCart(user_id)
+        cartProds = []
+        for cart in userCart:
+            cartProds.append(Product.getProductbyId(cart[2]))
+
+        return jsonify({"message":"Success","cart":cartProds}),200
+    except Exception as e:
+        return jsonify({"message": "Error occurred", "error": str(e)}), 500
+
+
 
 #USER REGISTRATION CODE
 
@@ -154,6 +167,8 @@ def forgot_password():
 def logout():
     session.clear()
     return jsonify({'message': 'You have been logged out.'}), 200
+
+
 
 if __name__ == '__main__':
     app.run()
