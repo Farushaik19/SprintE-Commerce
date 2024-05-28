@@ -973,11 +973,21 @@ form.example::after {
 }
 
 
+.container{
+    display:flex;
+    justify-content:center; /*horizontal center*/
+    align-items:center; /*vertical center*/
+    flex-direction: column; /*stack children vertically*/
+    min-height:100vh; /*This takes full viewport height so incase content height is less that viewport height this is going to center the content vertically */
+}
+
 #loginForm {
     background-color: white;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    width: 300px;
+    margin-bottom: 20px;
 }
 
 #loginForm input {
@@ -986,6 +996,7 @@ form.example::after {
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #ddd;
+    font-size: 16px;
 }
 
 #loginForm button {
@@ -995,6 +1006,13 @@ form.example::after {
     border: none;
     color: white;
     background-color: #5C6BC0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#loginForm button:hover {
+    background-color: #3f4aa3;
 }
 
 .Forgot-Password {
@@ -1002,6 +1020,7 @@ form.example::after {
     text-align: right;
     text-decoration: none;
     color: #5C6BC0;
+    margin-top: 10px;
 }
 
 .create-account-button {
@@ -1013,13 +1032,30 @@ form.example::after {
     color: white;
     background-color: #5C6BC0;
     border-radius: 5px;
+    cursor: pointer;
 }
-*/
+
+.create-account-button:hover {
+    background-color: #3f4aa3;
+}
+
+
+
+.container{
+    display:flex;
+    justify-content:center; /*horizontal center*/
+    align-items:center; /*vertical center*/
+    flex-direction: column; /*stack children vertically*/
+    min-height:100vh; /*This takes full viewport height so incase content height is less that viewport height this is going to center the content vertically */
+}
+
 #registrationForm {
     background-color: white;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    width: 300px;
+    margin-bottom: 20px;
 }
 
 #registrationForm input {
@@ -1028,6 +1064,7 @@ form.example::after {
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #ddd;
+    font-size: 16px;
 }
 
 #registrationForm button {
@@ -1037,6 +1074,13 @@ form.example::after {
     border: none;
     color: white;
     background-color: #5C6BC0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#registrationForm button:hover {
+    background-color: #3f4aa3;
 }
 
 .create-account-button {
@@ -1048,7 +1092,15 @@ form.example::after {
     color: white;
     background-color: #5C6BC0;
     border-radius: 5px;
+    cursor: pointer;
 }
+
+.create-account-button:hover {
+    background-color: #3f4aa3;
+}
+
+/*
+
 #forgotPasswordForm {
     background-color: white;
     padding: 20px;
@@ -1102,6 +1154,52 @@ form.example::after {
     border-color:#4CAF50;
 }
 
+*/
+
+
+.container{
+    display:flex;
+    justify-content:center; /*horizontal center*/
+    align-items:center; /*vertical center*/
+    flex-direction: column; /*stack children vertically*/
+    min-height:100vh; /*This takes full viewport height so incase content height is less that viewport height this is going to center the content vertically */
+}
+#forgotPasswordForm {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+#forgotPasswordForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+#forgotPasswordForm button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #5C6BC0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#forgotPasswordForm button:hover {
+    background-color: #3f4aa3;
+}
+
+
+
 
 .form-popup {
             display: none;
@@ -1136,7 +1234,6 @@ form.example::after {
             border-radius: 5px;
         }
 
-adminOps
 #remove-button{
     background-color: #4CAF50;
     color: white;
