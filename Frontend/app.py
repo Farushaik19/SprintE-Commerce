@@ -17,8 +17,9 @@ def login():
 @app.route('/signIn')
 def signup():
    return render_template('signIn.html')
-
-
+@app.route('/forgotPassword')
+def forgotPassword():
+   return render_template('forgotPassword.html')
 @app.route('/cart')
 def cart():
    return render_template('cartpage.html')
