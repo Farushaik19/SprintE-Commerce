@@ -1203,7 +1203,6 @@ form.example::after {
     border-radius: 4px;
     cursor: pointer;
     transition: 0.02s
-
 }
 
 .styled-button:hover{
@@ -1246,4 +1245,21 @@ form.example::after {
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
             border-radius: 5px;
         }
+
+#remove-button{
+    background-color: #4CAF50;
+    color: white;
+    font-size: 14px;
+    font-weight: 450;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.02s
+}
+
+.button-position {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 
