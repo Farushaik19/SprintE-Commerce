@@ -49,10 +49,6 @@
 
                 <label for="desc">Product Description:</label><br>
                 <textarea type="text" id="desc" name="desc"></textarea><br><br>
-
-                <label for="img">Image link:</label><br>
-                <input type="text" id="img" name="img"><br><br>           <!-- can change type to url if needed -->
-
                 <label for="price">Price:</label><br>
                 <input type="number" id="price" name="price" required><br><br>
 
@@ -66,7 +62,7 @@
        <div class="pro-container">
     {% for product in products %}
     <div class="pro">
-        <img src="static/images/G7.jpg" alt="">
+        <img src="{{product[6]}}" alt="">
         <div class="des">
             <span>{{ product[0] }}</span>
             <h5>{{ product[1] }}</h5>
@@ -74,7 +70,9 @@
         </div>
 
         <div class = "button-position">
-            <button id="remove-button" >Remove </button>
+            <form action="http://127.0.0.1:5000/deleteProduct/{{product[0]}}" method="POST" id="deleteProduct">
+                <button id="remove-button">Remove</button>
+            </form>
         </div>
 
         <form action="http://127.0.0.1:8000/addCart" method="POST" id="addToCartForm">
