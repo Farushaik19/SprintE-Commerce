@@ -115,7 +115,7 @@ body {
 }
 
 #hero {
-    background: url('images/WhatsApp\ Image\ 2022-05-31\ at\ 2.24.37\ PM\ \(1\).jpeg');
+    background: url('images/WhatsApp\ Image\ 2022-05-31\ at\ 2.24.37\ PM\ \(1\).jpg');
     background-position: center;
     background-size: cover;
     height: 90vh;
@@ -718,25 +718,6 @@ button.white {
     width: 40%;
 }
 
-.fasio {
-    width: 100px;
-    height: 80px;
-}
-
-.app-store {
-    width: 150px;
-    height: 80px;
-}
-
-.google-play {
-    width: 150px;
-    height: 80px;
-}
-
-.gate {
-    width: 200px;
-    height: 80px;
-}
 
 footer {
     display: flex;
@@ -748,11 +729,13 @@ footer .col {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 20pxs;
+    margin-bottom: 20px;
 }
 
-footer .logo {
+footer .fasio {
     margin-bottom: 30px;
+    width: 100px;
+    height: 90px;
 }
 
 footer h4 {
@@ -772,9 +755,22 @@ footer a {
     margin-bottom: 10px;
 }
 
+footer .follow i{
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer; 
+}
+footer .install .row img{
+    border: 1px solid #088178;
+    border-radius: 6px;
+}
+footer .install img{
+    margin: 10px 0 15px 0;
+
+}
 footer .follow i:hover,
-footer a:hover {
-    color: green;
+footer a:hover{
+    color: #088178;
 }
 
 footer .copyright {
@@ -1194,6 +1190,118 @@ form.example::after {
     display: table;
 }
 
+
+#loginForm {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+#loginForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#loginForm button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #5C6BC0;
+}
+
+.Forgot-Password {
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color: #5C6BC0;
+}
+
+.create-account-button {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #5C6BC0;
+    border-radius: 5px;
+}
+
+#registrationForm {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+#registrationForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#registrationForm button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #5C6BC0;
+}
+
+.create-account-button {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #5C6BC0;
+    border-radius: 5px;
+}
+#forgotPasswordForm {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+#forgotPasswordForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#forgotPasswordForm button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #5C6BC0;
+}
+
+.create-account-button {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #5C6BC0;
+    border-radius: 5px;
+}
+
 .styled-button{
     background-color: #4CAF50;
     color: white;
@@ -1246,6 +1354,7 @@ form.example::after {
             border-radius: 5px;
         }
 
+adminOps
 #remove-button{
     background-color: #4CAF50;
     color: white;
@@ -1262,4 +1371,3 @@ form.example::after {
     justify-content: flex-start;
     align-items: center;
 }
-
