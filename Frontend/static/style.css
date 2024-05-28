@@ -1194,6 +1194,118 @@ form.example::after {
     display: table;
 }
 
+
+#loginForm {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+#loginForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#loginForm button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #5C6BC0;
+}
+
+.Forgot-Password {
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color: #5C6BC0;
+}
+
+.create-account-button {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #5C6BC0;
+    border-radius: 5px;
+}
+
+#registrationForm {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+#registrationForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#registrationForm button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #5C6BC0;
+}
+
+.create-account-button {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #5C6BC0;
+    border-radius: 5px;
+}
+#forgotPasswordForm {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+#forgotPasswordForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#forgotPasswordForm button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #5C6BC0;
+}
+
+.create-account-button {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #5C6BC0;
+    border-radius: 5px;
+}
+
 .styled-button{
     background-color: #4CAF50;
     color: white;
@@ -1229,5 +1341,6 @@ form.example::after {
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
             overflow: auto;
         }
+
 
 

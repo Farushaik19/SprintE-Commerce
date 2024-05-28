@@ -16,6 +16,16 @@ def home():
 def cart():
    return render_template('cartpage.html')
 
+@app.route('/login')
+def login():
+   return render_template('login.html')
+@app.route('/signIn')
+def signup():
+   return render_template('signIn.html')
+@app.route('/forgotPassword')
+def forgotPassword():
+   return render_template('forgotPassword.html')
+
 @app.route('/addCart',methods=['POST'])
 def addTocart():
    print("data is ",request.form["product_id"])
