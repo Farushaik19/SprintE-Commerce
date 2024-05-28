@@ -42,7 +42,7 @@
 
         <button class="styled-button" onclick="openForm()" >Add New Product</button>
         <div class="form-popup" id="myForm">
-            <form action="/" method="get">
+            <form action="/addProduct" method="post">
                 <h4>Adding a Product</h4>
                 <label for="name">Product Name:</label><br>
                 <input type="text" id="name" name="name" required><br><br>
@@ -56,7 +56,7 @@
                 <label for="price">Price:</label><br>
                 <input type="number" id="price" name="price" required><br><br>
 
-                <button type="submit" class="styled-button">Submit</button>
+                <button type="submit" class="styled-button">Add Product</button>
                 <button type="button" class="styled-button" onclick="closeForm()">Close</button>
             </form>
         </div>

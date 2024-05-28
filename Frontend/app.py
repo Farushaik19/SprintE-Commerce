@@ -40,5 +40,22 @@ def addTocart():
    else:
        return redirect("http://127.0.0.1:8000")
 
+# Add Product Post
+@app.route('/addProduct',methods=["POST"])
+def addProduct():
+
+    res = requests.post("http://127.0.0.1:5000/addProduct",
+                        json={"name": request.form["name"],
+                              "description": request.form["desc"],
+                              "price": request.form["price"],
+                              },
+                        headers={"Content-Type": "application/json"},
+                        )
+    if res.status_code == 201:
+        return redirect("http://127.0.0.1:8000")
+    else:
+        return redirect("http://127.0.0.1:8000")
+
+
 if __name__ == '__main__':
    app.run(port=8000)
