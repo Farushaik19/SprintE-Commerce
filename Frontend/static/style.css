@@ -1230,4 +1230,20 @@ form.example::after {
             overflow: auto;
         }
 
+#message {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            border: 1px solid #4CAF50;
+            background-color: #4CAF50;
+            color: white;
+            font-size:20px;
+            z-index: 1000;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+        }
 

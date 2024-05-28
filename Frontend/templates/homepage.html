@@ -75,101 +75,21 @@
             <input type="hidden" name="user_id" value="1">
             <input type="hidden" name="product_id" value="{{ product[0] }}">
 
-            <button type="submit">
+            <button type="submit" onclick="showMessage()">
                 <i class="far fa-shopping-cart cart"></i>
+                <div id="message">Item added to cart!</div>
             </button>
         </form>
-
     </div>
     {% endfor %}
 </div>
+
 
     </section>
     <section id="banner" class="section-m1">
         <h4>Discount Sale</h4>
         <h2>Up to <span>70% off</span>-All t-shirts & Accessories</h2>
         <button class="normal">Explore More</button>
-    </section>
-    <section id="product1" class="section-p1">
-        <h1>New Arrivals</h1>
-        <p>Summer collection new modern design</p>
-        <div class="pro-container">
-            <div class="pro">
-                <img src="images/G10.jpg" alt="">
-                <div class="des">
-                    <span>BTS</span>
-                    <h5> T-shirt</h5>
-                    <h4>$78</h4>
-                </div>
-                <a href="#"><i class="far fa-shopping-cart cart"></i></a>
-            </div>
-
-            <div class="pro">
-                <img src="images\WhatsApp Image 2022-05-30 at 7.39.53 PM.jpeg " alt="">
-                <div class="des">
-                    <span>adidas</span>
-                    <h5>Cartoon Astronut T-shirt</h5>
-                    <h4>$78</h4>
-                </div>
-                <a href="#"><i class="far fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/G2.jpg" alt="">
-                <div class="des">
-                    <span>FASIO</span>
-                    <h5>Longlenght wear</h5>
-                    <h4>$78</h4>
-                </div>
-                <a href="#"><i class="far fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/B3.jpg" alt="">
-                <div class="des">
-                    <span>adidas</span>
-                    <h5>Cartoon Astronut shirt</h5>
-                    <h4>$78</h4>
-                </div>
-                <a href="#"><i class="far fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/G9.jpg" alt="">
-                <div class="des">
-                    <span>Roadstar</span>
-                    <h5>style T-shirt</h5>
-                    <h4>$78</h4>
-                </div>
-                <a href="#"><i class="far fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/B9.jpg" alt="">
-                <div class="des">
-                    <span>adidas</span>
-                    <h5>Floral shirts</h5>
-                    <h4>$78</h4>
-                </div>
-                <a href="#"><i class="far fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/B4.jpg" alt="">
-                <div class="des">
-                    <span>adidas</span>
-                    <h5>Cartoon Astronut T-shirt</h5>
-                    <h4>$78</h4>
-                </div>
-                <a href="#"><i class="far fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/sumantha.png" alt="">
-                <div class="des">
-                    <span>FASIO</span>
-                    <h5>Trendy wear</h5>
-
-                    <h4>$78</h4>
-                </div>
-                <a href="#"><i class="far fa-shopping-cart cart"></i></a>
-            </div>
-
-        </div>
     </section>
 
     <section id="newsletter" class="section-p1 section-m1">
@@ -184,6 +104,7 @@
 
         </div>
     </section>
+
     <footer class="section-p1">
         <div class="col">
             <img src=" images\logo.jpeg" class="fasio" alt="">
@@ -242,10 +163,13 @@
     function openForm() {
         document.getElementById("myForm").style.display = "block";
     }
-
     function closeForm() {
         document.getElementById("myForm").style.display = "none";
     }
+    function showMessage() {
+            var message = document.getElementById("message");
+            message.style.display = "block";
+        }
     </script>
 </body>
 
